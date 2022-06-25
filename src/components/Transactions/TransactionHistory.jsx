@@ -1,5 +1,5 @@
 export default function TransactionHistory({ items }) {
-	return (
+  return (
     <table class="transaction-history">
       <thead>
         <tr>
@@ -8,7 +8,6 @@ export default function TransactionHistory({ items }) {
           <th>Currency</th>
         </tr>
       </thead>
-
       <tbody>
         <tr>
           <td>Invoice</td>
