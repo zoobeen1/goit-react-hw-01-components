@@ -1,6 +1,8 @@
-export default function TransactionHistory({ items }) {
+import PropTypes from 'prop-types';
+
+function TransactionHistory({ items }) {
   return (
-    <table class="transaction-history">
+    <table className="transaction-history">
       <thead>
         <tr>
           <th>Type</th>
@@ -9,17 +11,17 @@ export default function TransactionHistory({ items }) {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Invoice</td>
-          <td>125</td>
-          <td>USD</td>
-        </tr>
-        <tr>
-          <td>Withdrawal</td>
-          <td>85</td>
-          <td>USD</td>
-        </tr>
+        {items.map(item => (
+          <tr key={item.id}>
+            <td>{item.type}</td>
+            <td>{item.amount}</td>
+            <td>{item.currency}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
 }
+TransactionHistory.propTypes = {};
+
+export default TransactionHistory;
