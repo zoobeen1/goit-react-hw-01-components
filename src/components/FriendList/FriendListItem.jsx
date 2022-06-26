@@ -1,10 +1,17 @@
 import PropTypes from 'prop-types';
+import { backgroundColor } from 'styled-system';
+import css from './FriendList.module.css';
 function FriendListItem({ isOnline, avatar, name }) {
   return (
-    <li className="item">
-      <span className="status">{isOnline ? 'Online' : 'Offline'}</span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
+    <li className={css.item}>
+      <span
+        className={css.status}
+        style={{
+          backgroundColor: isOnline ? 'red' : 'green',
+        }}
+      ></span>
+      <img className={css.avatar} src={avatar} alt={name} width="48" />
+      <p className={css.name}>{name}</p>
     </li>
   );
 }
