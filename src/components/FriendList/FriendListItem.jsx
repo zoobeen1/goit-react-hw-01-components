@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { backgroundColor } from 'styled-system';
 import css from './FriendList.module.css';
 function FriendListItem({ isOnline, avatar, name }) {
   return (
