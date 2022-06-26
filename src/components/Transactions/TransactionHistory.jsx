@@ -6,9 +6,9 @@ function TransactionHistory({ items }) {
     <table className={css.transactionHistory}>
       <thead className={css.thead}>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className={css.th}>Type</th>
+          <th className={css.th}>Amount</th>
+          <th className={css.th}>Currency</th>
         </tr>
       </thead>
       <tbody>
@@ -19,9 +19,9 @@ function TransactionHistory({ items }) {
               backgroundColor: index % 2 === 0 ? '#c8e6c9' : '#ffffff',
             }}
           >
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+            <td className={css.td}>{item.type}</td>
+            <td className={css.td}>{item.amount}</td>
+            <td className={css.td}>{item.currency}</td>
           </tr>
         ))}
       </tbody>
