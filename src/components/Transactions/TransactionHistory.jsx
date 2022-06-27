@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   StyledTable,
   StyledThead,
+  StyledHeadTr,
   StyledTr,
   StyledTh,
   StyledTd,
@@ -12,15 +13,15 @@ function TransactionHistory({ items }) {
   return (
     <StyledTable>
       <StyledThead>
-        <StyledTr>
+        <StyledHeadTr>
           <StyledTh>Type</StyledTh>
           <StyledTh>Amount</StyledTh>
           <StyledTh>Currency</StyledTh>
-        </StyledTr>
+        </StyledHeadTr>
       </StyledThead>
       <tbody>
         {items.map((item, index) => (
-          <StyledTr key={item.id}>
+          <StyledTr key={item.id} index={index}>
             <StyledTd>{item.type}</StyledTd>
             <StyledTd>{item.amount}</StyledTd>
             <StyledTd>{item.currency}</StyledTd>

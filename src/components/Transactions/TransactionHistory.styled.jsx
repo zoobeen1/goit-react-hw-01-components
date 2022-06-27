@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-
+function StyledbgColor(p) {
+  return p % 2 === 0 ? '#c8e6c9' : '#ffffff';
+}
 export const StyledTable = styled.table`
   margin-top: 50px;
   display: flex;
@@ -24,9 +26,14 @@ export const StyledThead = styled.thead`
   background-color: #f5f5f5;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  margin-bottom: 10px;
-  /* padding-top: 5px; */
   background-color: rgb(67, 141, 238);
+`;
+export const StyledHeadTr = styled.tr`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 620px;
 `;
 export const StyledTr = styled.tr`
   display: flex;
@@ -34,7 +41,7 @@ export const StyledTr = styled.tr`
   align-items: center;
   justify-content: space-around;
   width: 620px;
-  background-color: ${index % 2 === 0 ? '#c8e6c9' : '#ffffff'};
+  background-color: ${props => (props.index % 2 === 0 ? '#c8e6c9' : '#ffffff')};
 `;
 export const StyledTh = styled.th`
   width: 100%;
@@ -52,4 +59,5 @@ export const StyledTd = styled.td`
     border-left: 1px solid #ccc;
   }
 `;
-// export default { Styled_Table, Styled_thead, Styled_tr, Styled_th, Styled_td };
+/* background-color: ${index % 2 === 0 ? '#c8e6c9' : '#ffffff'}; */
+/* background-color: ${index % 2 === 0 ? '#c8e6c9' : '#ffffff'}; */
