@@ -39,7 +39,7 @@ export const StyledTr = styled.tr`
   align-items: center;
   justify-content: space-around;
   width: 620px;
-  background-color: ${props => (props.index % 2 === 0 ? '#c8e6c9' : '#ffffff')};
+  background-color: ${props => (props.index % 2 === 0 ? '#ffffff' : '#c8e6c9')};
 `;
 export const StyledTh = styled.th`
   width: 100%;
