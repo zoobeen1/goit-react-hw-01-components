@@ -1,4 +1,5 @@
-.statistics {
+import styled from 'styled-components';
+export const StyledStatistics = styled.section`
   margin-top: 50px;
   padding-top: 20px;
   display: flex;
@@ -13,22 +14,22 @@
   box-shadow: #636060 1px 1px 3px;
   margin-left: auto;
   margin-right: auto;
-}
-.title {
+`;
+export const StyledTitle = styled.h2`
   font-size: 30px;
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
-}
-.statlist {
+`;
+export const StyledStatlist = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 100%;
-}
-.statitem {
+`;
+export const StyledStatitem = styled.li`
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
@@ -38,16 +39,16 @@
   width: 100%;
   height: 100%;
   background-color: #fff;
-}
-.label {
+`;
+export const StyledLabel = styled.span`
   font-size: 0.9em;
   font-weight: 400;
   color: #ccc;
   margin-bottom: 8px;
-}
-.percentage {
+`;
+export const StyledPercentage = styled.span`
   font-size: 1.3em;
   font-weight: 700;
   color: #eee;
   margin-bottom: 5px;
-}
+`;

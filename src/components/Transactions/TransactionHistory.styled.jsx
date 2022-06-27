@@ -1,4 +1,6 @@
-.transactionHistory {
+import styled from 'styled-components';
+
+export const StyledTable = styled.table`
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -12,8 +14,8 @@
   border-radius: 4px;
   box-shadow: #636060 1px 1px 3px;
   margin-bottom: 50px;
-}
-.thead {
+`;
+export const StyledThead = styled.thead`
   font-size: 1.2em;
   font-weight: bold;
   color: #ddd;
@@ -25,21 +27,29 @@
   margin-bottom: 10px;
   /* padding-top: 5px; */
   background-color: rgb(67, 141, 238);
-}
-tr {
+`;
+export const StyledTr = styled.tr`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   width: 620px;
-}
-.th,
-.td {
+  background-color: ${index % 2 === 0 ? '#c8e6c9' : '#ffffff'};
+`;
+export const StyledTh = styled.th`
   width: 100%;
   padding: 15px;
   text-align-last: center;
-}
-.th + .th,
-.td + .td {
-  border-left: 1px solid #ccc;
-}
+  + th {
+    border-left: 1px solid #ccc;
+  }
+`;
+export const StyledTd = styled.td`
+  width: 100%;
+  padding: 15px;
+  text-align-last: center;
+  + td {
+    border-left: 1px solid #ccc;
+  }
+`;
+// export default { Styled_Table, Styled_thead, Styled_tr, Styled_th, Styled_td };

@@ -1,31 +1,33 @@
 import PropTypes from 'prop-types';
-import css from './TransactionHistory.module.css';
+// import css from './TransactionHistory.module.css';
+import {
+  StyledTable,
+  StyledThead,
+  StyledTr,
+  StyledTh,
+  StyledTd,
+} from './TransactionHistory.styled';
 
 function TransactionHistory({ items }) {
   return (
-    <table className={css.transactionHistory}>
-      <thead className={css.thead}>
-        <tr>
-          <th className={css.th}>Type</th>
-          <th className={css.th}>Amount</th>
-          <th className={css.th}>Currency</th>
-        </tr>
-      </thead>
+    <StyledTable>
+      <StyledThead>
+        <StyledTr>
+          <StyledTh>Type</StyledTh>
+          <StyledTh>Amount</StyledTh>
+          <StyledTh>Currency</StyledTh>
+        </StyledTr>
+      </StyledThead>
       <tbody>
         {items.map((item, index) => (
-          <tr
-            key={item.id}
-            style={{
-              backgroundColor: index % 2 === 0 ? '#c8e6c9' : '#ffffff',
-            }}
-          >
-            <td className={css.td}>{item.type}</td>
-            <td className={css.td}>{item.amount}</td>
-            <td className={css.td}>{item.currency}</td>
-          </tr>
+          <StyledTr key={item.id}>
+            <StyledTd>{item.type}</StyledTd>
+            <StyledTd>{item.amount}</StyledTd>
+            <StyledTd>{item.currency}</StyledTd>
+          </StyledTr>
         ))}
       </tbody>
-    </table>
+    </StyledTable>
   );
 }
 TransactionHistory.propTypes = {

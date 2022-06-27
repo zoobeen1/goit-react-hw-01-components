@@ -1,29 +1,42 @@
 import PropTypes from 'prop-types';
-import css from './profile.module.css';
+// import css from './profile.module.css';
+import {
+  StyledProfile,
+  StyledDescription,
+  StyledAvatar,
+  StyledName,
+  StyledTag,
+  StyledLocation,
+  StyledStats,
+  StyledStatsItem,
+  StyledLabel,
+  StyledQuantity,
+} from './profile.styled';
+
 function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt={tag} className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>{'@' + tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
-      <ul className={css.stats}>
-        <li>
-          <span className={css.label}>Followers </span>
-          <span className={css.quantity}>{stats.followers}</span>
-        </li>
-        <li>
-          <span className={css.label}>Views </span>
-          <span className={css.quantity}>{stats.views}</span>
-        </li>
-        <li>
-          <span className={css.label}>Likes </span>
-          <span className={css.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+    <StyledProfile>
+      <StyledDescription>
+        <StyledAvatar src={avatar} alt={tag} />
+        <StyledName>{username}</StyledName>
+        <StyledTag>{'@' + tag}</StyledTag>
+        <StyledLocation>{location}</StyledLocation>
+      </StyledDescription>
+      <StyledStats>
+        <StyledStatsItem>
+          <StyledLabel>Followers </StyledLabel>
+          <StyledQuantity>{stats.followers}</StyledQuantity>
+        </StyledStatsItem>
+        <StyledStatsItem>
+          <StyledLabel>Views </StyledLabel>
+          <StyledQuantity>{stats.views}</StyledQuantity>
+        </StyledStatsItem>
+        <StyledStatsItem>
+          <StyledLabel>Likes </StyledLabel>
+          <StyledQuantity>{stats.likes}</StyledQuantity>
+        </StyledStatsItem>
+      </StyledStats>
+    </StyledProfile>
   );
 }
 
