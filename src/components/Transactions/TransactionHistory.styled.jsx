@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-function StyledbgColor(p) {
-  return p % 2 === 0 ? '#c8e6c9' : '#ffffff';
-}
+
 export const StyledTable = styled.table`
   margin-top: 50px;
   display: flex;
