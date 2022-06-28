@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
-// import css from './profile.module.css';
 import {
-  Profile,
   Description,
   Avatar,
   Name,
@@ -12,10 +10,11 @@ import {
   StatsLabel,
   StatsQuantity,
 } from './profile.styled';
+import { Container } from '../common';
 
 function ProfileRender({ username, tag, location, avatar, stats }) {
   return (
-    <Profile>
+    <Container>
       <Description>
         <Avatar src={avatar} alt={tag} />
         <Name>{username}</Name>
@@ -36,7 +35,7 @@ function ProfileRender({ username, tag, location, avatar, stats }) {
           <StatsQuantity>{stats.likes}</StatsQuantity>
         </StatsItem>
       </Stats>
-    </Profile>
+    </Container>
   );
 }
 

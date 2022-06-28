@@ -1,10 +1,6 @@
 import styled from 'styled-components';
-import { Box } from '../common/Box';
-import { Container } from '../common/container';
+import { Box } from '../common';
 
-export const Profile = p => {
-  return <Container>{p.children}</Container>;
-};
 export const Description = p => {
   return (
     <Box
