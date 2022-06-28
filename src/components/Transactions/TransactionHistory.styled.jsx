@@ -11,7 +11,7 @@ export const Table = styled.table`
   box-shadow: ${p => p.theme.shadows.normal};
   margin-bottom: 50px;
 `;
-export const Thead = styled.thead`
+export const Head = styled.thead`
   font-size: 1.2em;
   font-weight: bold;
   color: ${p => p.theme.colors.light_grey};
@@ -19,17 +19,17 @@ export const Thead = styled.thead`
   border-top-right-radius: ${p => p.theme.radii.normal};
   background-color: ${p => p.theme.colors.table_color_head};
 `;
-export const HeadTr = styled.tr`
+export const HeadRow = styled.tr`
   display: flex;
 `;
-export const Th = styled.th`
+export const HeadItem = styled.th`
   width: 100%;
   padding: 15px;
   + * {
     border-left: ${p => p.theme.borders.normal};
   }
 `;
-export const Tr = styled.tr`
+export const Row = styled.tr`
   display: flex;
   background-color: ${p =>
     p.index % 2 === 0
@@ -37,7 +37,7 @@ export const Tr = styled.tr`
       : p.theme.colors.table_color_body};
 `;
 
-export const Td = styled.td`
+export const Item = styled.td`
   width: 100%;
   padding: 15px;
   text-align: center;
