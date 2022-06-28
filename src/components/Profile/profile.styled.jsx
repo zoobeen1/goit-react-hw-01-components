@@ -1,19 +1,9 @@
 import styled from 'styled-components';
 import { Box } from '../common/Box';
+import { Container } from '../common/container';
 
 export const Profile = p => {
-  return (
-    <Box
-      width="small"
-      border="normal"
-      borderRadius="normal"
-      mt={5}
-      mx="auto"
-      boxShadow="normal"
-    >
-      {p.children}
-    </Box>
-  );
+  return <Container>{p.children}</Container>;
 };
 export const Description = p => {
   return (
