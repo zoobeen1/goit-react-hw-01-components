@@ -1,21 +1,12 @@
 import PropTypes from 'prop-types';
-import {
-  StyledItem,
-  StyledStatus,
-  StyledAvatar,
-  StyledName,
-} from './FriendList.styled';
+import { Item, Status, Avatar, Name } from './FriendList.styled';
 function FriendListItem({ isOnline, avatar, name }) {
   return (
-    <StyledItem>
-      <StyledStatus
-        style={{
-          backgroundColor: isOnline ? 'red' : 'green',
-        }}
-      ></StyledStatus>
-      <StyledAvatar src={avatar} alt={name} width="48" />
-      <StyledName>{name}</StyledName>
-    </StyledItem>
+    <Item>
+      <Status isOnline={isOnline} />
+      <Avatar src={avatar} alt={name} width="48" />
+      <Name>{name}</Name>
+    </Item>
   );
 }
 FriendListItem.propTypes = {

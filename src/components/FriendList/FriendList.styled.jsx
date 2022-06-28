@@ -1,46 +1,44 @@
 import styled from 'styled-components';
 
-export const StyledFriendList = styled.ul`
+export const FriendList = styled.ul`
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 310px;
+  width: ${p => p.theme.width.normal};
   margin-left: auto;
   margin-right: auto;
 `;
-export const StyledItem = styled.li`
+export const Item = styled.li`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  /* justify-content: space-between; */
   width: 100%;
-  height: 100%;
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 4px;
-  box-shadow: #636060 1px 1px 3px;
+  background-color: ${p => p.theme.colors.background};
+  border: ${p => p.theme.borders.light};
+  border-radius: ${p => p.theme.radii.normal};
+  box-shadow: ${p => p.theme.shadows.normal};
   margin-bottom: 10px;
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
 `;
-export const StyledStatus = styled.span`
-  border-radius: 50%;
+export const Status = styled.span`
+  border-radius: ${p => p.theme.radii.round};
   width: 20px;
   height: 20px;
+  background-color: ${p => (p.isOnline ? 'red' : 'green')};
 `;
-export const StyledAvatar = styled.img`
+export const Avatar = styled.img`
   width: 90px;
   height: 90px;
   border-radius: 10px;
   margin-right: 10px;
   margin-left: 10px;
 `;
-export const StyledName = styled.p`
+export const Name = styled.p`
   font-size: 1.5rem;
   font-weight: 600;
-  color: #000;
+  color: ${p => p.theme.colors.text};
   margin-left: 20px;
 `;

@@ -1,39 +1,34 @@
 import PropTypes from 'prop-types';
 import {
-  StyledStatistics,
-  StyledTitle,
-  StyledStatlist,
-  StyledStatitem,
-  StyledLabel,
-  StyledPercentage,
+  Statistics,
+  Title,
+  List,
+  ListItem,
+  Label,
+  Percentage,
 } from './statistics.styled';
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
-function Statistics({ title, stats }) {
+function StatisticsRender({ title, stats }) {
   return (
-    <StyledStatistics>
-      {title && <StyledTitle>{title}</StyledTitle>}
-      <StyledStatlist>
+    <Statistics>
+      {title && <Title>{title}</Title>}
+      <List>
         {stats.map(item => (
-          <StyledStatitem
-            key={item.id}
-            style={{
-              backgroundColor: getRandomHexColor(),
-            }}
-          >
-            <StyledLabel>{item.label}</StyledLabel>
-            <StyledPercentage>{item.percentage + '%'}</StyledPercentage>
-          </StyledStatitem>
+          <ListItem key={item.id} background={getRandomHexColor()}>
+            <Label>{item.label}</Label>
+            <Percentage>{item.percentage + '%'}</Percentage>
+          </ListItem>
         ))}
-      </StyledStatlist>
-    </StyledStatistics>
+      </List>
+    </Statistics>
   );
 }
 
-Statistics.propTypes = {
+StatisticsRender.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
@@ -42,4 +37,4 @@ Statistics.propTypes = {
     })
   ).isRequired,
 };
-export default Statistics;
+export default StatisticsRender;

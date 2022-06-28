@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-export const StyledProfile = styled.div`
-  width: 320px;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
+
+export const Profile = styled.div`
+  width: ${p => p.theme.width.normal};
+  border: ${p => p.theme.borders.light};
+  border-radius: ${p => p.theme.radii.normal};
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: #636060 1px 1px 3px;
+  box-shadow: ${p => p.theme.shadows.normal};
 `;
-export const StyledDescription = styled.div`
+export const Description = styled.div`
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
@@ -17,57 +18,59 @@ export const StyledDescription = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: ${p => p.theme.colors.background};
 `;
-export const StyledAvatar = styled.img`
+export const Avatar = styled.img`
   width: 200px;
-  border-radius: 50%;
+  border-radius: ${p => p.theme.radii.round};
 `;
-export const StyledName = styled.p`
+export const Name = styled.p`
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 10px;
+  color: ${p => p.theme.colors.text};
 `;
-export const StyledTag = styled.p`
+export const Tag = styled.p`
   font-size: 1em;
-  color: #554f4f;
+  color: ${p => p.theme.colors.grey};
+  margin-top: 10px;
+  font-weight: 500;
+`;
+export const Location = styled.p`
+  color: ${p => p.theme.colors.grey};
+  font-size: 1em;
+  font-weight: 500;
   margin-top: 10px;
 `;
-export const StyledLocation = styled.p`
-  color: #554f4f;
-  font-size: 1em;
-  margin-top: 10px;
-`;
-export const StyledStats = styled.ul`
+export const Stats = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* width: 100%; */
   height: 50px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #e0e0e0;
+  background-color: ${p => p.theme.colors.background};
+  border-top: ${p => p.theme.borders.normal};
 `;
-export const StyledStatsItem = styled.li`
+export const StatsItem = styled.li`
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #e7e7e7;
-  + li {
-    border-left: 1px solid #e0e0e0;
+  background-color: ${p => p.theme.colors.background_grey};
+  + * {
+    border-left: ${p => p.theme.borders.normal};
   }
 `;
-export const StyledLabel = styled.span`
+export const StatsLabel = styled.span`
   font-size: 0.8em;
   font-weight: 700;
-  color: #857b7b;
+  color: ${p => p.theme.colors.grey};
   margin-bottom: 5px;
 `;
-export const StyledQuantity = styled.span`
+export const StatsQuantity = styled.span`
   font-size: 1em;
   font-weight: 700;
-  color: #554f4f;
+  color: ${p => p.theme.colors.text};
 `;

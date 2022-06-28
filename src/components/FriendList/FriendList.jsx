@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { StyledFriendList } from './FriendList.styled';
+import { FriendList } from './FriendList.styled';
 import FriendListItem from './FriendListItem';
-function FriendList({ friends }) {
+function FriendListRender({ friends }) {
   return (
-    <StyledFriendList>
+    <FriendList>
       {friends.map(friend => (
         <FriendListItem
           key={friend.id}
@@ -12,11 +12,10 @@ function FriendList({ friends }) {
           isOnline={friend.isOnline}
         />
       ))}
-    </StyledFriendList>
+    </FriendList>
   );
 }
-
-FriendList.propTypes = {
+FriendListRender.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       avatar: PropTypes.string.isRequired,
@@ -25,4 +24,4 @@ FriendList.propTypes = {
     })
   ).isRequired,
 };
-export default FriendList;
+export default FriendListRender;

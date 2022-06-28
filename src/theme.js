@@ -1,42 +1,29 @@
 export const theme = {
+  width: {
+    normal: '320px',
+    large: '620px',
+  },
   colors: {
-    black: '#000',
-    white: '#fff',
+    grey: '#554f4f',
+    light_grey: '#f5f5f5',
     text: '#2a2a2a',
-    background: '#fff',
-    primary: '#07c',
-    secondary: '#05a',
-    accent: '#609',
-    muted: '#f6f6f6',
-  },
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
-  fonts: {
-    body: 'system-ui, sans-serif',
-    heading: 'system-ui, sans-serif',
-    monospace: 'Menlo, monospace',
-  },
-  fontSizes: {
-    xs: '12px',
-    s: '14px',
-    m: '16px',
-    l: '32px',
-    xl: '64px',
-  },
-  fontWeights: {
-    normal: 400,
-    bold: 700,
-  },
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
+    background: '#f5f5f5',
+    background_grey: '#e7e7e7',
+    table_color_head: '#438dee',
+    table_color_body: '#c8e6c9',
   },
   borders: {
     none: 'none',
-    normal: '1px solid',
+    light: '1px solid #eaeaea',
+    normal: '1px solid #e0e0e0',
   },
   radii: {
     none: '0',
     normal: '4px',
     round: '50%',
+  },
+  shadows: {
+    none: 'none',
+    normal: '#636060 1px 1px 3px',
   },
 };

@@ -1,46 +1,46 @@
 import PropTypes from 'prop-types';
 // import css from './profile.module.css';
 import {
-  StyledProfile,
-  StyledDescription,
-  StyledAvatar,
-  StyledName,
-  StyledTag,
-  StyledLocation,
-  StyledStats,
-  StyledStatsItem,
-  StyledLabel,
-  StyledQuantity,
+  Profile,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  Stats,
+  StatsItem,
+  StatsLabel,
+  StatsQuantity,
 } from './profile.styled';
 
-function Profile({ username, tag, location, avatar, stats }) {
+function ProfileRender({ username, tag, location, avatar, stats }) {
   return (
-    <StyledProfile>
-      <StyledDescription>
-        <StyledAvatar src={avatar} alt={tag} />
-        <StyledName>{username}</StyledName>
-        <StyledTag>{'@' + tag}</StyledTag>
-        <StyledLocation>{location}</StyledLocation>
-      </StyledDescription>
-      <StyledStats>
-        <StyledStatsItem>
-          <StyledLabel>Followers </StyledLabel>
-          <StyledQuantity>{stats.followers}</StyledQuantity>
-        </StyledStatsItem>
-        <StyledStatsItem>
-          <StyledLabel>Views </StyledLabel>
-          <StyledQuantity>{stats.views}</StyledQuantity>
-        </StyledStatsItem>
-        <StyledStatsItem>
-          <StyledLabel>Likes </StyledLabel>
-          <StyledQuantity>{stats.likes}</StyledQuantity>
-        </StyledStatsItem>
-      </StyledStats>
-    </StyledProfile>
+    <Profile>
+      <Description>
+        <Avatar src={avatar} alt={tag} />
+        <Name>{username}</Name>
+        <Tag>{'@' + tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
+      <Stats>
+        <StatsItem>
+          <StatsLabel>Followers </StatsLabel>
+          <StatsQuantity>{stats.followers}</StatsQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel>Views </StatsLabel>
+          <StatsQuantity>{stats.views}</StatsQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel>Likes </StatsLabel>
+          <StatsQuantity>{stats.likes}</StatsQuantity>
+        </StatsItem>
+      </Stats>
+    </Profile>
   );
 }
 
-Profile.propTypes = {
+ProfileRender.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
@@ -48,4 +48,4 @@ Profile.propTypes = {
   stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 
-export default Profile;
+export default ProfileRender;
