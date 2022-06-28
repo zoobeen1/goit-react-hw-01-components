@@ -1,8 +1,16 @@
 export const theme = {
+  sizes: {
+    small: '320px',
+    medium: '768px',
+    large: '1024px',
+    xlarge: '1280px',
+    xxlarge: '1600px',
+  },
   width: {
     normal: '320px',
     large: '620px',
   },
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   colors: {
     grey: '#554f4f',
     light_grey: '#f5f5f5',

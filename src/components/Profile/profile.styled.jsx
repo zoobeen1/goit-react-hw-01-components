@@ -1,25 +1,36 @@
 import styled from 'styled-components';
+import { Box } from '../common/Box';
 
-export const Profile = styled.div`
-  width: ${p => p.theme.width.normal};
-  border: ${p => p.theme.borders.light};
-  border-radius: ${p => p.theme.radii.normal};
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: ${p => p.theme.shadows.normal};
-`;
-export const Description = styled.div`
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: ${p => p.theme.colors.background};
-`;
+export const Profile = p => {
+  return (
+    <Box
+      width="small"
+      border="normal"
+      borderRadius="normal"
+      mt={5}
+      mx="auto"
+      boxShadow="normal"
+    >
+      {p.children}
+    </Box>
+  );
+};
+export const Description = p => {
+  return (
+    <Box
+      pt={3}
+      pb={3}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      width="100%"
+      bg="background"
+    >
+      {p.children}
+    </Box>
+  );
+};
 export const Avatar = styled.img`
   width: 200px;
   border-radius: ${p => p.theme.radii.round};

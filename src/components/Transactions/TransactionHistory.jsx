@@ -8,7 +8,7 @@ import {
   Item,
 } from './TransactionHistory.styled';
 
-function TransactionHistory({ items }) {
+export default function TransactionHistory({ items }) {
   return (
     <Table>
       <Head>
@@ -19,11 +19,11 @@ function TransactionHistory({ items }) {
         </HeadRow>
       </Head>
       <tbody>
-        {items.map((item, index) => (
-          <Row key={item.id} index={index}>
-            <Item>{item.type}</Item>
-            <Item>{item.amount}</Item>
-            <Item>{item.currency}</Item>
+        {items.map(({ id, type, amount, currency }, index) => (
+          <Row key={id} index={index}>
+            <Item>{type}</Item>
+            <Item>{amount}</Item>
+            <Item>{currency}</Item>
           </Row>
         ))}
       </tbody>
@@ -41,4 +41,4 @@ TransactionHistory.propTypes = {
   ).isRequired,
 };
 
-export default TransactionHistory;
+// export default TransactionHistory;
