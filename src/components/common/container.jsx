@@ -1,5 +1,5 @@
 import { Box } from './Box';
-export const Container = p => {
+export const Container = ({ children }) => {
   return (
     <Box
       width="small"
@@ -9,7 +9,7 @@ export const Container = p => {
       mx="auto"
       boxShadow="normal"
     >
-      {p.children}
+      {children}
     </Box>
   );
 };
